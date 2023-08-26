@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awesome Dashboard</title>
+<script>
+    function updateTime() {
+      const now = new Date();
+      const hours = now.getHours() % 12 || 12; // Convert to 12-hour format
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const period = now.getHours() < 12 ? 'AM' : 'PM';
+
+      const timeString = `${hours}:${minutes}:${seconds} ${period}`;
+      document.getElementById('timeDisplay').textContent = timeString;
+    }
+
+    // Update the time every second
+    setInterval(updateTime, 1000);
+
+    // Initial update
+    updateTime();
+</script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  #header {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  .widget {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .widget h3 {
+    margin-top: 0;
+    color: #3498db;
+  }
+  .nav-links {
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .nav-links a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .time{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    margin-top: 0;
+    color: #000000;
+    
+  }
+</style>
+</head>
+<body>
+  <div id="header">
+    <h1>Property Supply Section Dashboard</h1>
+  </div>
+  <div class="nav-links">
+    <a href="sample.html" target="_blank">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+  </div>
+  
+  <div class="dashboard">
+    <div class="widget">
+        <h3>Administrative Division</h3>
+        <ul>
+        <li>Property Supply Section</li>
+        <li>Procurement Section</li>
+        <li>Records Section</li>
+        </ul>
+    </div>
+    <div class="widget">
+        <h3>Financial Management Division</h3>
+        <ul>
+            <li>Accounting Section</li>
+            <li>Budget Section</li>
+            <li>Cash Section</li>
+        </ul>
+    </div>
+    <div class="widget">
+      <h3>Widget 3</h3>
+      <p>Additional content and data visualization here.</p>
+    </div>
+    <div class="widget">
+        <h3>Widget 3</h3>
+        <p>Additional content and data visualization here.</p>
+      </div>
+      <div class="widget">
+        <h3>Widget 3</h3>
+        <p>Additional content and data visualization here.</p>
+      </div>
+      <div class="widget">
+        <h3>Widget 3</h3>
+        <p>Additional content and data visualization here.</p>
+      </div>
+      <div class="widget">
+        <h3>Widget 3</h3>
+        <p>Additional content and data visualization here.</p>
+      </div>
+      <br><br>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Your Organization. All rights reserved.</p>
+    </div>
+    <div class="time">
+        <p>Current time: <span id="timeDisplay">12:00:00 AM</span></p>
+    </div>
+
+  </div>
+  
+
+</body>
+</html>
