@@ -4,87 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PropertySupplySection</title>
-<script>
-    function updateTime() {
-      const now = new Date();
-      const hours = now.getHours() % 12 || 12; // Convert to 12-hour format
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      const period = now.getHours() < 12 ? 'AM' : 'PM';
 
-      const timeString = `${hours}:${minutes}:${seconds} ${period}`;
-      document.getElementById('timeDisplay').textContent = timeString;
-    }
-
-    // Update the time every second
-    setInterval(updateTime, 1000);
-
-    // Initial update
-    updateTime();
-</script>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  #header {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-  }
-  .dashboard {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-  }
-  .widget {
-    background-color: #ffffff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 25px;
-  }
-  .widget h3 {
-    margin-top: 0;
-    color: #3498db;
-  }
-  .nav-links {
-    background-color: #3498db;
-    text-align: center;
-    padding: 10px 0;
-  }
-  .nav-links a {
-    display: inline-block;
-    margin: 0 10px;
-    text-decoration: none; 
-    color: white;
-  }
-  .footer {
-    background-color: #3498db;
-    color: white;
-    position: bottom;
-    padding: 10px;
-    text-align: center;
-  }
-  .time{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    margin-top: 0;
-    color: #fd0000;
-    text-align: center;
-    
-  }
-  @media (max-width: 768px) {
-    /* Adjust margins for mobile devices */
-  }
-
-</style>
 <link rel="icon" href="pss.jpg"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="time.js"></script>
+
 </head>
 <body>
   <div id="header">
@@ -133,9 +57,9 @@
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <div class="footer">
         <p>&copy; 2023 Property FO Caraga. All rights reserved.</p>
-    </div>
+              <h3><p>Current time: <span id="timeDisplay">12:00:00 AM</span></p></h3>
+    </div><br/>
     <div class="time">
-        <h3><p>Current time: <span id="timeDisplay">12:00:00 AM</span></p></h3>
     </div>
 
   </div>
