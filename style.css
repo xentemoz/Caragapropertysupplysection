@@ -6,11 +6,24 @@ body {
   min-height: 100vh;
   background: linear-gradient(to bottom, #3498db, #ffffff);
 }
+iframe{
+  border-style: outset;
+  border-width: 5px;
+  width: 305%; /* Use 100% to make it span edge to edge horizontally */
+  height: 1000px;
+  }
 #header {
   background-color: #3498db;
   color: white;
   padding: 10px 0;
   text-align: center;
+}
+header a{
+  background-color: #020000;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
 }
 .dashboard {
   display: grid;
@@ -38,6 +51,12 @@ body {
   margin: 0 10px;
   text-decoration: none; 
   color: white;
+}
+.boarder a{
+  border-style: solid;
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
 }
 .footer {
   background-color: #3498db;
@@ -94,4 +113,9 @@ body {
   border: none;
   padding: 5px;
   width: 150px;
+}
+div b{
+  border-style: double;
+  border-width: 10px;
+  background: linear-gradient(to bottom, #3498db, #ffffff);
 }
