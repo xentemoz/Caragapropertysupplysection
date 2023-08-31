@@ -6,11 +6,13 @@ body {
   min-height: 100vh;
   background: linear-gradient(to bottom, #3498db, #ffffff);
 }
-iframe{
+.block a{
+  background-color: #f5f5f5;
   border-style: outset;
   border-width: 5px;
   width: 305%; /* Use 100% to make it span edge to edge horizontally */
-  height: 1000px;
+  height: 33%;
+  display: table;
   }
 #header {
   background-color: #3498db;
@@ -30,12 +32,15 @@ header a{
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgb(255, 255, 255);
 }
 .widget {
   background-color: #ffffff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 25px;
+  border-width: 5px;
 }
 .widget h3 {
   margin-top: 0;
@@ -114,8 +119,42 @@ header a{
   padding: 5px;
   width: 150px;
 }
-div b{
-  border-style: double;
-  border-width: 10px;
-  background: linear-gradient(to bottom, #3498db, #ffffff);
+
+.upper{
+  background-color: #f5f5f5;
+  border-style: outset;
+  border-width: 5px;
+  width: 100%; /* Use 100% to make it span edge to edge horizontally */
+  height: 33;
+  display: table;
+}
+.wow{
+  color: #040292;
+  font-size:large;
+  background-color: #f5f5f5;
+  border-style: outset;
+  border-width: 3px;
+  width: 305%; /* Use 100% to make it span edge to edge horizontally */
+  height: 33%;
+  display: table;
+  text-align: justify;
+}
+.block {
+    text-align: left;
+    float: center;
+    margin-right: 10px; /* Add some space between the image and links */
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+}
+em{
+  font-size:30px; /* You can adjust this value as needed */
+  background-color: #f5f5f5;
+  border-style: outset;
+  border-width: 3px;
+  width: 305%; /* Use 100% to make it span edge to edge horizontally */
+  height: 33%;
+  display: table;
+  text-align: justify;
+
 }
